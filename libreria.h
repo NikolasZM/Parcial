@@ -69,6 +69,7 @@ void funcion_04(int (&mat)[10][10]){
 }
 
 void funcion_05(int mat[10][10],int a,int b,int c,int &a1,int &b1,int &c1) {
+	if ((0<=a<100)&&(0<=b<100)&&(0<=a<100)) {
     for (int i{0};i<10;++i) {
         for (int j{0};j<10;++j) {
             if (mat[i][j]==a) {
@@ -82,6 +83,30 @@ void funcion_05(int mat[10][10],int a,int b,int c,int &a1,int &b1,int &c1) {
             }
         }
     }
+	}else {
+		cout<<"\nUn valor ingresado no es valido, recuerda que los numeros deben estar entre 0 y 99\n";
+	}
+}
+
+void funcion_06(int a,int b,int mat[10][10]) {
+	if ((0<=a)&&(a<100)&&(99<b)&&(b<201)) {
+	int aux{0};
+	for (int i{0};i<10;++i) {
+        for (int j{0};j<10;++j) {
+      	if (mat[i][j]==a) {
+      		mat[i][j]=b;
+      		++aux;
+      	}
+      	}
+    }  	
+    if (aux==0) {
+    	cout<<GREEN<<"\nNo se encontro ningun valor de ese tipo."<<DF;
+    }else {
+    	cout<<GREEN<<"\nLos valores fueron cambiados"<<DF;
+    }
+	}else {
+		cout<<"\nUno o mas valores son incorrectos, recuerda que el primer numero debe estar entre 0 y 99, y el segundo numero entre 100 y 200\n";
+	}
 }
 
 void funcion_07(int (&mat)[10][10]){
@@ -103,23 +128,6 @@ void funcion_07(int (&mat)[10][10]){
 		cout<<GREEN<<"\nTodos los multiplos de 5 son multiplicados por 10\n"<<DF;
 	}
 
-}
-
-void funcion_06(int a,int b,int mat[10][10]) {
-	int aux{0};
-	for (int i{0};i<10;++i) {
-        for (int j{0};j<10;++j) {
-      	if (mat[i][j]==a) {
-      		mat[i][j]=b;
-      		++aux;
-      	}
-      	}
-    }  	
-    if (aux==0) {
-    	cout<<GREEN<<"\nNo se encontro ningun valor de ese tipo.";
-    }else {
-    	cout<<GREEN<<"\nLos valores fueron cambiados"<<DF;
-    }
 }
 
 void funcion_08(int (&mat)[10][10]){

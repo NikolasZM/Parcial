@@ -9,7 +9,6 @@
 using namespace std;
 
 #define	GREEN 	"\x1B[32m"
-#define	OTRO 	"\x1B[30m"
 #define	DF 		"\x1B[39m"
 
 
@@ -26,7 +25,7 @@ int main() {
 				cout<<"\nElija una opcion:\n<1> Crea una matriz con valores aleatorios.\n<2>Imprima la matriz\n<3>Modifica un valor especifico de la matriz.\n";
 				cout<<"<4>Convierte los valores en la diagonal de la matriz por valores igual a cero.\n";
 				cout<<"<5>Ingresa 3 valores y se buscara cuantas veces se encuentran esos valores en la matriz\n";
-				cout<<"<6>Reemplaza un numero a buscar por otro numero de 3 cifras\n<7>Multiplos de 5 por 10.\n<8>Transpuesta\n<9>Cierra el programa.";
+				cout<<"<6>Reemplaza un numero a buscar por otro numero entre 100 y 200.\n<7>Multiplos de 5 por 10.\n<8>Transpuesta\n<9>Cierra el programa.";
 				cout<<"\n" << ">>";
 				cin>>opt;
 				break;
@@ -65,7 +64,7 @@ int main() {
             	int a,b;
             	cout<<"\nIngresa el numero de 2 cifras a buscar.\n>>";
             	cin>>a;
-            	cout<<"\nIngresa el numero de 3 cifras que será su reemplazo.\n>>";
+            	cout<<"\nIngresa el numero entre 100 y 200 que será su reemplazo.\n>>";
             	cin>>b;
             	funcion_06(a,b,matriz);
             	opt=0;
