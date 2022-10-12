@@ -23,16 +23,19 @@ int main() {
 	while (true) {
 		switch(opt) {
 			case 0:
-				cout<<"\nElija una opcion:\n<1> Crea una matriz con valores aleatorios.\n<2>Imprima la matriz\n<3>Modifica un valor especifico de la matriz.\n<4>Convierte los valores en la diagonal de la matriz por valores igual a cero.\n<5>Ingresa 3 valores y se buscara cuantas veces se encuentran esos valores en la matriz\n<7>Multiplos de 5 por 10.\n<8>Transpuesta";
+				cout<<"\nElija una opcion:\n<1> Crea una matriz con valores aleatorios.\n<2>Imprima la matriz\n<3>Modifica un valor especifico de la matriz.\n";
+				cout<<"<4>Convierte los valores en la diagonal de la matriz por valores igual a cero.\n";
+				cout<<"<5>Ingresa 3 valores y se buscara cuantas veces se encuentran esos valores en la matriz\n";
+				cout<<"<6>Reemplaza un numero a buscar por otro numero de 3 cifras\n<7>Multiplos de 5 por 10.\n<8>Transpuesta\n<9>Cierra el programa.";
 				cout<<"\n" << ">>";
 				cin>>opt;
 				break;
 			case 1:
-				crearMatriz(matriz);
+				funcion_01(matriz);
 				opt=0;
 				break;
 			case 2:
-				mostrarMatriz(matriz);
+				funcion_02(matriz);
 				opt=0;
 				break;
 			case 3:
@@ -58,6 +61,15 @@ int main() {
                 cout<< GREEN <<"El numero "<< DF <<c<<" se repite "<<c1<<" veces.\n";
                 opt=0;
                 break; }	
+            case 6: {
+            	int a,b;
+            	cout<<"\nIngresa el numero de 2 cifras a buscar.\n>>";
+            	cin>>a;
+            	cout<<"\nIngresa el numero de 3 cifras que será su reemplazo.\n>>";
+            	cin>>b;
+            	funcion_06(a,b,matriz);
+            	opt=0;
+            	break; }    
 			case 7:
 				funcion_07(matriz);
 				opt=0;

@@ -22,7 +22,7 @@ void encabezado(char x[]){
 }
 
 
-void crearMatriz(int (&mat)[10][10]) {		//funcion_01
+void funcion_01(int (&mat)[10][10]) {		//funcion_01
 	srand(time(NULL));
 	for (int i{0};i<10;++i) {
 		for (int j{0};j<10;++j) {
@@ -32,7 +32,7 @@ void crearMatriz(int (&mat)[10][10]) {		//funcion_01
 	cout<<GREEN<<"\nMatriz Creada\n"<<DF;
 }
 
-void mostrarMatriz(int mat[10][10]) {		//funcion_02
+void funcion_02(int mat[10][10]) {		//funcion_02
 	for (int i{0};i<10;++i) {
 		cout<<"| ";
 		for (int j{0};j<10;++j) {	
@@ -105,6 +105,23 @@ void funcion_07(int (&mat)[10][10]){
 
 }
 
+void funcion_06(int a,int b,int mat[10][10]) {
+	int aux{0};
+	for (int i{0};i<10;++i) {
+        for (int j{0};j<10;++j) {
+      	if (mat[i][j]==a) {
+      		mat[i][j]=b;
+      		++aux;
+      	}
+      	}
+    }  	
+    if (aux==0) {
+    	cout<<GREEN<<"\nNo se encontro ningun valor de ese tipo.";
+    }else {
+    	cout<<GREEN<<"\nLos valores fueron cambiados"<<DF;
+    }
+}
+
 void funcion_08(int (&mat)[10][10]){
 
 	int aux[10][10];
@@ -124,4 +141,3 @@ void funcion_08(int (&mat)[10][10]){
 
 	cout<<GREEN<<"\nLa matriz fue transpuesta\n"<<DF;
 }
-
