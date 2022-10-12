@@ -67,7 +67,23 @@ void funcion_04(int (&mat)[10][10]){
 	cout<<GREEN<<"\nLa digonal es igual a 0.\n"<<DF;
 }
 
-void funcion_05(int (&mat)[10][10]){
+void funcion_05(int mat[10][10],int a,int b,int c,int &a1,int &b1,int &c1) {
+    for (int i{0};i<10;++i) {
+        for (int j{0};j<10;++j) {
+            if (mat[i][j]==a) {
+                ++a1;
+            }else if (mat[i][j]==b) {
+                ++b1;
+            }else if (mat[i][j]==c) {
+                ++c1;
+            }else {
+                continue;
+            }
+        }
+    }
+}
+
+void funcion_08(int (&mat)[10][10]){
 
 	int aux[10][10];
 
