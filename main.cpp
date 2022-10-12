@@ -53,9 +53,9 @@ int main() {
                 cout<<"\nIngresa el tercer numero a buscar\n>>";
                 cin>>c;
                 funcion_05(matriz,a,b,c,a1,b1,c1);
-                cout<< GREEN <<"El numero "<<a<<" se repite "<<a1<<" veces.\n" << DF;
-                cout<< GREEN <<"El numero "<<b<<" se repite "<<b1<<" veces.\n" << DF;
-                cout<< GREEN <<"El numero "<<c<<" se repite "<<c1<<" veces.\n" << DF;
+                cout<< GREEN <<"El numero "<< DF <<a<<" se repite "<<a1<<" veces.\n";
+                cout<< GREEN <<"El numero "<< DF <<b<<" se repite "<<b1<<" veces.\n";
+                cout<< GREEN <<"El numero "<< DF <<c<<" se repite "<<c1<<" veces.\n";
                 opt=0;
                 break; }	
 			case 7:
