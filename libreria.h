@@ -53,3 +53,36 @@ void funcion_03(int (&mat)[10][10]) {
 	cout<<GREEN<<"\nEl valor fue modificado exitosamente.\n"<<DF;
 
 }
+
+void funcion_04(int (&mat)[10][10]){
+	for(int fila{0}; fila < 10 ; ++fila){
+		for(int columna{0}; columna < 10 ; ++columna){
+
+			if(fila == columna){
+				mat[fila][columna] = 0;
+			}
+
+		}
+	}
+	cout<<GREEN<<"\nLa digonal es igual a 0.\n"<<DF;
+}
+
+void funcion_05(int (&mat)[10][10]){
+
+	int aux[10][10];
+
+	for(int fila{0}; fila < 10 ; ++fila){
+		for(int columna{0}; columna < 10 ; ++columna){
+			aux[fila][columna] = mat[columna][fila];
+		}
+	}
+
+	for(int fila{0}; fila < 10 ; ++fila){
+		for(int columna{0}; columna < 10 ; ++columna){
+			mat[fila][columna] = aux[fila][columna];
+		}
+	}
+
+
+	cout<<GREEN<<"\nLa matriz fue transpuesta\n"<<DF;
+}
