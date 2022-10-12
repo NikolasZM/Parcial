@@ -6,6 +6,7 @@
 using namespace std;
 
 #define	GREEN 	"\x1B[32m"
+#define	OTRO 	"\x1B[30m"
 #define	DF 		"\x1B[39m"
 
 
@@ -83,6 +84,27 @@ void funcion_05(int mat[10][10],int a,int b,int c,int &a1,int &b1,int &c1) {
     }
 }
 
+void funcion_07(int (&mat)[10][10]){
+
+	int aux{0};
+
+	for(int fila{0}; fila < 10 ; ++fila){
+		for(int columna{0}; columna < 10 ; ++columna){
+			if (mat[fila][columna]%5 == 0){
+				mat[fila][columna] *= 10;
+				++aux;
+			}
+		}
+	}
+
+	if(aux == 0 ){
+		cout<<OTRO<<"\nNo hay multiplos de 5\n"<<DF;
+	}else{
+		cout<<GREEN<<"\nTodos los multiplos de 5 son multiplicados por 10\n"<<DF;
+	}
+
+}
+
 void funcion_08(int (&mat)[10][10]){
 
 	int aux[10][10];
@@ -102,3 +124,4 @@ void funcion_08(int (&mat)[10][10]){
 
 	cout<<GREEN<<"\nLa matriz fue transpuesta\n"<<DF;
 }
+
