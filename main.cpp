@@ -8,9 +8,6 @@
 
 using namespace std;
 
-#define	GREEN 	"\x1B[32m"
-#define	DF 		"\x1B[39m"
-
 
 int main() {
 	
@@ -22,8 +19,8 @@ int main() {
 	while (true) {
 		switch(opt) {
 			case 0:
-				cout<<"\nElija una opción:\n<1> Crea una matriz con valores aleatorios.\n<2>Imprima la matriz\n<3>Modifica un valor especifico de la matriz.";
-				cout<<">>";
+				cout<<"\nElija una opcion:\n<1> Crea una matriz con valores aleatorios.\n<2>Imprima la matriz\n<3>Modifica un valor especifico de la matriz.\n<4>Convierte los valores en la diagonal de la matriz por valores igual a cero.\n<5>Transpuesta";
+				cout<<"\n" << ">>";
 				cin>>opt;
 				break;
 			case 1:
@@ -36,6 +33,14 @@ int main() {
 				break;
 			case 3:
 				funcion_03(matriz);
+				opt=0;
+				break;
+			case 4:
+				funcion_04(matriz);
+				opt=0;
+				break;
+			case 5:
+				funcion_05(matriz);
 				opt=0;
 				break;
 			case 9:
